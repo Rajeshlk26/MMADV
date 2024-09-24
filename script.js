@@ -83,7 +83,7 @@ function init() {
         scroller: ".main",
         start: "top 70%",
         end: "top -50%",
-        scrub: 2,
+        scrub: true,
       },
     });
     
@@ -96,7 +96,7 @@ function init() {
         scroller: ".main",
         start: "top -20%",
         end: "top -100%",
-        scrub: 2,
+        scrub: true,
       },
     });
     
