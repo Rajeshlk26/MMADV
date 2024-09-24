@@ -5,7 +5,12 @@ function init() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector(".main"),
     smooth: true,
-    smartphone: { smooth: true },
+    smartphone: {
+      smooth: true,
+      direction: 'vertical', // Ensure vertical scrolling
+      gestureDirection: 'vertical',
+      breakpoint: 0, // To trigger for all mobile sizes
+    },
     tablet: { smooth: true },
   });
 
