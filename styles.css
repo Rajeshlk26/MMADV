@@ -688,9 +688,6 @@ footer {
 
 @media(max-width: 600px){
 
-  .main-wrapper {
-    min-height: calc(100vh - 15vh)
-  }
   #nav-part2 .main_navbar {
     display: none; 
 }
@@ -978,7 +975,7 @@ footer {
 }
 
 .home-footer{
-  height: 15vh;
+  height: auto;
 }
 
 .footer-container {
