@@ -88,7 +88,7 @@ function init() {
         scroller: ".main",
         start: "top 70%",
         end: "top -50%",
-        scrub: true,
+        scrub: 1,
       },
     });
     
@@ -101,7 +101,7 @@ function init() {
         scroller: ".main",
         start: "top -20%",
         end: "top -100%",
-        scrub: true,
+        scrub: 1,
       },
     });
     
