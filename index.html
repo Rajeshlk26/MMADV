@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MadMasterAdventures</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="home-page">
+    <div class="main-wrapper">
+      <div class="nav">
+        <a href="./index.html" class="logo">
+          <img src="./Images/Logo-1.png" alt="logo" />
+        </a>
+        
+        <!-- Menu icon to trigger sidebar -->
+        <i class="ri-menu-line menu-icon" id="open-menu"></i>
+      
+        <div id="nav-part2">
+          <ul class="main_navbar">
+            <li><a href="./about.html" class="nav-link">About us</a></li>
+            <li><a href="./what-we-do.html" class="nav-link">What we do</a></li>
+            <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="./Adventures.html" class="nav-link">Adventures</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact Us</a></li>
+          </ul>
+      
+          <!-- Sidebar menu (hidden by default) -->
+          <ul class="sidebar" id="sidebar">
+            <i class="ri-close-line close-icon" id="close-menu"></i>
+            <li><a href="./about.html" class="nav-link">About us</a></li>
+            <li><a href="./what-we-do.html" class="nav-link">What we do</a></li>
+            <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="./Adventures.html" class="nav-link">Adventures</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="main">
+        <div class="page1">
+          <h1></h1>
+          <video autoplay muted loop src="./Images/MMA Website Video.mp4" type="video/mp4"></video>
+        </div>
+        <div class="page2">
+          <h1>We are Mud Master<br>Adventures,</br></h1>
+          <div class="page2-container">
+            <div class="page2-left">
+              <h2>A wonderful journey of bike adventure</h2>
+            </div>
+            <div class="page2-right">
+              <p>
+                With best safety and motor adventure we take you through the
+                journey of unknown and a unforgetable experience
+              </p>
+              <button onclick="window.location.href='./about.html';">
+                About Us
+              </button>
+            </div>
+          </div> 
+        </div>
+        <div class="page-3">
+          <div class="p3-details">
+            <h1>Upcoming Expeditions</h1>
+            <p>Discover the beauty of some of the most breathtaking landscapes on earth. Join us on our expeditions to explore new horizons and experience adventure like never before.</p>
+          </div>
+          <div class="expedition-card-section">
+            <button id="prev" class="arr-btn">
+              <i class="ri-arrow-left-s-line"></i>
+            </button>
+            <div class="expedition-cards">
+              <div class="expedition-card">
+                <div class="expedition-image">
+                  <img src="./Images/yercaud13.JPG" alt="Yercaud">
+                </div>
+                <div class="expedition-content">
+                  <h2>Yercaud</h2>
+                  <p>Explore the rugged and breathtaking landscapes of Yercaud.</p>
+                  <div>
+                    <a href="./Adventures.html" class="know-more-btn">Know More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="expedition-card">
+                <div class="expedition-image">
+                  <img src="./Images/ooty2.jpg" alt="ooty">
+                </div>
+                <div class="expedition-content">
+                  <h2>Coorg</h2>
+                  <p>Venture into the remote and rugged Coorg.</p>
+                  <div>
+                    <a href="./Adventures.html" class="know-more-btn">Know More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="expedition-card">
+                <div class="expedition-image">
+                  <img src="./Images/Coming soon.jpg" alt="Ladakh">
+                </div>
+                <div class="expedition-content">
+                  <h2>Coming Soon</h2>
+                  <p>Coming soon, hold your clutch Mudheads.</p>
+                  <div>
+                    <a href="./Adventures.html" class="know-more-btn">Know More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="expedition-card">
+                <div class="expedition-image">
+                  <img src="./Images/Coming soon.jpg" alt="Spiti">
+                </div>
+                <div class="expedition-content">
+                  <h2>Coming Soon</h2>
+                  <p>Coming soon, hold your clutch Mudheads.</p>
+                  <div>
+                    <a href="./Adventures.html" class="know-more-btn">Know More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="expedition-card">
+                <div class="expedition-image">
+                  <img src="./Images/Coming soon.jpg" alt="Spiti">
+                </div>
+                <div class="expedition-content">
+                  <h2>Coming Soon</h2>
+                  <p>Coming soon, hold your clutch Mudheads.</p>
+                  <div>
+                    <a href="./Adventures.html" class="know-more-btn">Know More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="next" class="arr-btn">
+              <i class="ri-arrow-right-s-line"></i>
+            </button>
+          </div>
+        </div>
+        <div class="page4">
+          <h2>HEAR OUR ADVENTURER'S STORIES</h2>
+          <div class="carousel">
+            <div class="carousel-wrapper">
+            <div class="carousel-item">
+              <div class="video-container">
+                <video src="./Images/IMG_5771.mp4" muted></video>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-container">
+                <video src="./Images/IMG_5772.mp4" muted></video>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-container">
+                <video src="./Images/IMG_5773.mp4" muted></video>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-container">
+                <video src="./Images/IMG_5774.mp4" muted></video>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-container">
+                <video src="./Images/IMG_5775.mp4" muted></video>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-container">
+                <video src="./Images/IMG_5776.mp4" muted></video>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="popup" id="videoPopup">
+            <div class="popup-content">
+              <span class="close">&times;</span>
+            <video id="popupVideo" controls></video>
+            </div>
+          </div>
+        </div>
+        <div class="page5">
+          <h2>Our Valued Partners</h2> <!-- Title added -->
+          <div class="partnership-grid">
+            <div class="partnership-item">
+              <img src="./Images/Coming soon.jpg" alt="Partner 1">
+            </div>
+            <div class="partnership-item">
+              <img src="./Images/Coming soon.jpg" alt="Partner 2">
+            </div>
+            <div class="partnership-item">
+              <img src="./Images/Coming soon.jpg" alt="Partner 3">
+            </div>
+            <div class="partnership-item">
+              <img src="./Images/Coming soon.jpg" alt="Partner 4">
+            </div>
+          </div>
+        </div>
+        
+        <footer>
+          <div class="footer-container">
+              <div class="footer-logo">
+                  <img src="./Images/Logo-1.png" alt="logo" class="logo" />
+              </div>
+              <div class="footer-social-links">
+                  <h3>Follow Us</h3>
+                  <div class="social-links">
+                      <a href="https://www.facebook.com/share/YwmehpaCfQxJviCj/?mibextid=LQQJ4d"><i class="bx bxl-facebook"></i></a>
+                      <a href="https://www.instagram.com/mudmasteradventures?igsh=aDhiZGwzNWQ3eG4w&utm_source=qr"><i class="bx bxl-instagram"></i></a>
+                      <a href="https://wa.me/8123473752"><i class="bx bxl-whatsapp"></i></a>
+                  </div>
+                  <div class="footer-links">
+                      <a href="./">Home</a>
+                      <a href="./about.html">About Us</a>
+                      <a href="./what-we-do.html">What We Do</a>
+                      <a href="./gallery.html">Gallery</a>
+                      <a href="./expeditions.html">Expeditions</a>
+                      <a href="./contact.html">Contact Us</a>
+                  </div>
+              </div>
+              <div class="footer-address">
+                  <h3>Address</h3>
+                  <p>Mud Master Adventures, Kalyan Nagar</p>
+                  <p>Bengaluru-560043, India</p>
+                  <p class="email-id">mudmasteradventures@gmail.com</p>
+                  <p class="phone-number">+91 8123473752</p>
+              </div>
+          </div>
+          <div class="footer-links">
+            
+          </div>
+      </footer>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+  
+  </body>
+</html>

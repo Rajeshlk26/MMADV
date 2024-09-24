@@ -1,0 +1,282 @@
+.what-we-do-section {
+  padding: 1vh 10vw;
+}
+
+.what-we-do-title {
+  text-align: center;
+  margin-bottom: 6vh;
+}
+
+.what-we-do-title h1 {
+  font-size: 3vw;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 2vh;
+}
+
+.what-we-do-title p {
+  font-size: 1.6vw;
+  color: #fff;
+}
+
+.what-we-do-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh 0;
+}
+
+.what-we-do-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 3vh 2vw;
+  height: 400px;
+}
+
+.what-we-do-image {
+  flex: 1;
+  margin-right: 4vw;
+  max-width: 40%;
+  height: 100%;
+}
+
+.what-we-do-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.what-we-do-text {
+  flex: 1;
+}
+
+.what-we-do-text .number {
+  font-size: 10vw;
+  font-weight: bold;
+  color: #111;
+  opacity: 0.2;
+  font-family: "Arial", sans-serif;
+}
+
+.what-we-do-text h2 {
+  font-size: 2vw;
+  font-weight: 300;
+  color: #111;
+  margin-bottom: 2vh;
+}
+
+.what-we-do-text p {
+  font-size: 1.2vw;
+  color: #555;
+}
+
+.our-commitments-section {
+  margin-top: 8vh;
+  padding: 4vh 2vw;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+
+.our-commitments-section h2 {
+  font-size: 3vw;
+  font-weight: 300;
+  color: #111;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.our-commitments-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4vh 4vw;
+}
+
+.our-commitments-item {
+  background-color: #fff;
+  padding: 3vh 2vw;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.our-commitments-item h3 {
+  font-size: 1.8vw;
+  font-weight: 300;
+  color: #111;
+  margin-bottom: 2vh;
+}
+
+.our-commitments-item p {
+  font-size: 1.2vw;
+  color: #555;
+}
+
+.faqs-section {
+  margin-top: 8vh;
+  padding: 4vh 2vw;
+  background-color: #0a0a0a;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.faqs-section h2 {
+  font-size: 3vw;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.faqs-content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2vh 4vw;
+}
+
+.faqs-item {
+  background-color: #181818;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: border-radius 0.3s ease;
+}
+
+.faqs-item h3{
+  font-size: 1.5vw;
+  font-weight: 300;
+  color: #0c0b0b;
+}
+
+.faqs-item p{
+  font-size: 1.05vw;
+  font-weight: 100;
+  color: #fff;
+  line-height: 1;
+  margin-top: 1vh;
+}
+
+.faqs-item-header {
+  background-color: #c85828;
+  color: #111;
+  padding: 1.5vh 2vw;
+  font-size: 1.6vw;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqs-item-header i {
+  font-size: 2vw;
+  transition: transform 0.3s ease;
+}
+
+.faqs-item.active .faqs-item-header i {
+  transform: rotate(180deg);
+}
+
+.faqs-item-content {
+  padding: 0;
+  font-size: 1.2vw;
+  color: #555;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  display: none;
+}
+
+.faqs-item.active .faqs-item-content {
+  border-radius:  20px 20px  0 0;
+  padding: 2vh 2vw;
+  display: block;
+  max-height: 1000px; /* Increase this value if the content is taller */
+}
+
+@media (max-width: 600px) {
+  .what-we-do-section {
+    padding: 5vh 5vw; /* Adjust padding for smaller screens */
+  }
+
+  .what-we-do-title h1 {
+    font-size: 4vw; /* Adjusted font size for smaller screens */
+  }
+
+  .what-we-do-title p {
+    font-size: 2.5vw; /* Adjusted font size for smaller screens */
+  }
+
+  .what-we-do-content {
+    flex-direction: column; /* Change to column layout */
+  }
+
+  .what-we-do-card {
+    flex-direction: column; /* Change to column layout for cards */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .what-we-do-image {
+    margin-right: 0; /* Remove right margin */
+    max-width: 100%; /* Full width on smaller screens */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .what-we-do-text .number {
+    font-size: 15vw; /* Adjusted font size for smaller screens */
+  }
+
+  .what-we-do-text h2 {
+    font-size: 4vw; /* Adjusted font size for smaller screens */
+  }
+
+  .what-we-do-text p {
+    font-size: 2.2vw; /* Adjusted font size for smaller screens */
+  }
+
+  .our-commitments-section {
+    margin-top: 6vh;
+    padding: 3vh 2vw;
+  }
+  
+  .our-commitments-item {
+    padding: 3vh 2vw;
+    border-radius: 20px;
+  }
+
+  .our-commitments-section h2 {
+    font-size: 4.5vw; 
+    margin-bottom: 3vh;
+  }
+
+  .our-commitments-content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2vh 2vw;
+  }
+
+  .our-commitments-item h3 {
+    font-size: 3vw; /* Adjusted font size for smaller screens */
+  }
+
+  .our-commitments-item p {
+    font-size: 2vw; /* Adjusted font size for smaller screens */
+  }
+
+  .faqs-section h2 {
+    font-size: 5vw; /* Adjusted font size for smaller screens */
+  }
+
+  .faqs-item h3 {
+    font-size: 2.5vw; /* Adjusted font size for smaller screens */
+  }
+
+  .faqs-item p {
+    font-size: 2vw; /* Adjusted font size for smaller screens */
+  }
+
+  .faqs-item-header {
+    font-size: 2.5vw; /* Adjusted font size for smaller screens */
+  }
+}

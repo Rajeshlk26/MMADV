@@ -1,0 +1,174 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Mud Master Adventures</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_about.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="./index.html" class="logo">
+        <img src="./Images/Logo-1.png" alt="logo" />
+      </a>
+      
+      <!-- Menu icon to trigger sidebar -->
+      <i class="ri-menu-line menu-icon" id="open-menu"></i>
+    
+      <div id="nav-part2">
+        <ul class="main_navbar">
+          <li><a href="./about.html" class="nav-link">About us</a></li>
+          <li><a href="./what-we-do.html" class="nav-link">What we do</a></li>
+          <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="./Adventures.html" class="nav-link">Adventures</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+    
+        <!-- Sidebar menu (hidden by default) -->
+        <ul class="sidebar" id="sidebar">
+          <i class="ri-close-line close-icon" id="close-menu"></i>
+          <li><a href="./about.html" class="nav-link">About us</a></li>
+          <li><a href="./What-we-do.html" class="nav-link">What we do</a></li>
+          <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="./Adventures.html" class="nav-link">Adventures</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main_about_us">
+      <div id="about_page1" class="about-section">
+        <div class="about_title">
+          <h1>COMPANY OVERVIEW</h1>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="./Images/I3MS5284.JPEG" alt="" />
+          </div>
+          <div class="about-text">
+            <p>
+              Mud Master Adventures is a motorcycle adventure travel company
+              based in Bangalore, Karnataka, India. Designed to explore roads
+              less traveled, Mud Master Adventures offers off-road riding
+              experiences that enhance skills while discovering the best
+              unexplored private trails amidst thick forests. Our mission is to
+              provide adventure enthusiasts with quality, safety, trust,
+              memorable experiences, and exceptional hospitality.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="team-section">
+        <h2 style="text-align: center">Behind Mud Master Adventures</h2>
+        <p style="text-align: center">
+          Meet the founders who bring their passion for adventure to life.
+        </p>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-image">
+              <img src="./Images/Ajit_Profile.jpg" alt="Ajit Ramesh" />
+            </div>
+            <div class="team-info">
+              <h3>Ajit Ramesh</h3>
+              <p>Founder</p>
+              <p>
+                Ajit is a popular content creator known for his motorcycle
+                vlogs. His videos typically feature him riding different
+                motorcycles, offering reviews, sharing his riding experiences,
+                and engaging with his audience through commentary. Ajit is
+                recognized for his dynamic riding style and informative content,
+                which appeals to both motorcycle enthusiasts and casual viewers.
+                He often covers a range of topics from motorcycle maintenance to
+                gear reviews and travel adventures. Loves adventure and off-road
+                riding and exploring new places.
+              </p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-image">
+              <img src="./Images/I3MS5783.png" alt="Pavan Deepak" />
+            </div>
+            <div class="team-info">
+              <h3>Pavan Deepak</h3>
+              <p>Co-Founder</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus laborum quas harum illum nam odit. Ipsum, ratione!
+                Rerum corrupti reiciendis, molestiae praesentium molestias,
+                possimus quam aliquam culpa, dolor dicta nesciunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="./Images/Logo-1.png" alt="logo" class="logo" />
+          </div>
+          <div class="footer-social-links">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/YwmehpaCfQxJviCj/?mibextid=LQQJ4d"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/mudmasteradventures?igsh=aDhiZGwzNWQ3eG4w&utm_source=qr"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a href="https://wa.me/8123473752"
+                ><i class="bx bxl-whatsapp"></i
+              ></a>
+            </div>
+            <div class="footer-links">
+              <a href="./">Home</a>
+              <a href="./about.html">About Us</a>
+              <a href="./what-we-do.html">What We Do</a>
+              <a href="./gallery.html">Gallery</a>
+              <a href="./expeditions.html">Expeditions</a>
+              <a href="./contact.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="footer-address">
+            <h3>Address</h3>
+            <p>HSR Layout, Bangalore</p>
+            <p>Karnataka, PIN 560100, India</p>
+            <p class="phone-number">+91 9876543210</p>
+          </div>
+        </div>
+      </footer>
+     <script>
+      function toggleSidebar(menuIcon, closeBtn, sidebar) {
+  // Show the sidebar and hide the menu icon
+  menuIcon.addEventListener('click', function() {
+      sidebar.classList.add('active'); // Show the sidebar
+      menuIcon.style.display = 'none'; // Hide the menu icon
+  });
+
+  // Hide the sidebar and show the menu icon
+  closeBtn.addEventListener('click', function() {
+      sidebar.classList.remove('active'); // Hide the sidebar
+      menuIcon.style.display = 'block'; // Show the menu icon
+  });
+}
+
+// Call the function after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeBtn = document.querySelector('.close-icon');
+  const sidebar = document.querySelector('.sidebar');
+
+  toggleSidebar(menuIcon, closeBtn, sidebar);
+});
+     </script>
+    </div>
+  </body>
+</html>

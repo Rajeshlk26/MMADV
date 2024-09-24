@@ -1,0 +1,202 @@
+body.contact-page .nav {
+  background-color: transparent; 
+  position: relative;
+  z-index: 10;
+}
+
+.contact-image {
+  width: 100%;
+  height: 100vh; 
+  background-image: url('./Images/I3MS5284.JPEG'); 
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1; 
+  opacity: 0.7;
+}
+
+.contact-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f8f6f6;
+  text-shadow: 1px 1px 2px rgba(204, 120, 64, 0.5);
+  opacity: 0.8; 
+}
+
+
+.contact-form-section {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  padding: 4rem; 
+  gap: 2rem;
+}
+
+.contact-info {
+  text-align: left; 
+  padding: 1rem;
+}
+
+.contact-info h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 2 rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+
+.contact-info h3 {
+  margin-top: 3rem; 
+  margin-bottom: 0.5rem; 
+  font-weight: 300;
+  color: #ffffff;
+}
+.contact-info h4 {
+  margin-top: 0.5rem; 
+  color: #ffffff;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%; 
+  max-width: 600px; 
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #ededed;
+  margin-bottom: 1rem; 
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+}
+
+.contact-form .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; 
+}
+
+.contact-form .form-row input,
+.contact-form .form-row textarea {
+  padding: 0.5rem;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem; 
+  margin-bottom: 0.5rem; 
+  color: #111;
+}
+
+.contact-form .form-row input:invalid,
+.contact-form .form-row textarea:invalid {
+  border: 2px solid #ff4d4d; /* Red border for invalid input */
+}
+
+.contact-form .form-row input:valid,
+.contact-form .form-row textarea:valid {
+  border: 2px solid #28a745; /* Green border for valid input */
+}
+
+.contact-form .form-row input:focus:invalid,
+.contact-form .form-row textarea:focus:invalid {
+  outline: none;
+  border-color: #ff4d4d; /* Red border on focus when invalid */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Red outer glow on invalid focus */
+}
+
+.contact-form .form-row input:focus:valid,
+.contact-form .form-row textarea:focus:valid {
+  outline: none;
+  border-color: #28a745; /* Green border on focus when valid */
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Green outer glow on valid focus */
+}
+
+/* Optional: Validation error message styling */
+.contact-form .form-row input:invalid:focus::placeholder,
+.contact-form .form-row textarea:invalid:focus::placeholder {
+  color: #ff4d4d; /* Red placeholder text on invalid input */
+}
+
+/* Button disabled state */
+.contact-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+/* Button enabled state */
+.contact-form button:enabled {
+  background-color: #EDBFFF;
+  color: #111;
+  cursor: pointer;
+}
+
+.contact-form .form-row textarea {
+  height: 10vh;
+}
+
+.contact-form button {
+  background-color: #EDBFFF;
+  color: #111;
+  border: none;
+  padding: 0.5rem 1rem; 
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+  .contact-image {
+    width: 100%;
+    height: 50vh; 
+    object-fit: cover;
+    opacity: 70%;
+  }
+  .contact-text {
+    font-size: 2rem;
+  }
+  
+  .contact-form-section {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    padding: 2rem; /* Reduce padding for smaller screens */
+    gap: 1rem; /* Adjust gap for a more compact layout */
+  }
+
+  .contact-info, .contact-form {
+    width: 100%; /* Make both sections full width */
+    padding: 0; /* Remove extra padding */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .contact-info h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .contact-form h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .contact-form .form-row {
+    margin-bottom: 1rem; /* Maintain spacing between form fields */
+  }
+
+  .contact-form .form-row input,
+  .contact-form .form-row textarea {
+    font-size: 0.8rem; /* Adjust font size for inputs and textareas */
+  }
+}

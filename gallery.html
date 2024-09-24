@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Mud Master Adventures</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_gallery.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <div class="nav">
+      <a href="./index.html" class="logo">
+        <img src="./Images/Logo-1.png" alt="logo" />
+      </a>
+
+      <!-- Menu icon to trigger sidebar -->
+      <i class="ri-menu-line menu-icon" id="open-menu"></i>
+
+      <div id="nav-part2">
+        <ul class="main_navbar">
+          <li><a href="./about.html" class="nav-link">About us</a></li>
+          <li><a href="./What-we-do.html" class="nav-link">What we do</a></li>
+          <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="./Adventures.html" class="nav-link">Adventures</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+
+        <!-- Sidebar menu (hidden by default) -->
+        <ul class="sidebar" id="sidebar">
+          <i class="ri-close-line close-icon" id="close-menu"></i>
+          <li><a href="./about.html" class="nav-link">About us</a></li>
+          <li><a href="./What-we-do.html" class="nav-link">What we do</a></li>
+          <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="./Adventures.html" class="nav-link">Adventures</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <h1>Gallery</h1>
+      <div class="gallery-grid">
+        <div class="gallery-card" onclick="showGallery('yercaud')">
+          <img src="./Images/yercaud5.JPG" alt="Yercaud" />
+          <h2>Yercaud</h2>
+        </div>
+
+        <div class="gallery-card" onclick="showGallery('coorg')">
+          <img src="./Images/ooty1.jpg" alt="Ooty" />
+          <h2>Coorg</h2>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="./Images/Logo-1.png" alt="logo" class="logo" />
+        </div>
+        <div class="footer-social-links">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/share/YwmehpaCfQxJviCj/?mibextid=LQQJ4d"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/mudmasteradventures?igsh=aDhiZGwzNWQ3eG4w&utm_source=qr"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="https://wa.me/8123473752"
+              ><i class="bx bxl-whatsapp"></i
+            ></a>
+          </div>
+          <div class="footer-links">
+            <a href="./">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./what-we-do.html">What We Do</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./expeditions.html">Expeditions</a>
+            <a href="./contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-address">
+          <h3>Address</h3>
+          <p>Mud Master Adventures, Kalyan Nagar</p>
+          <p>Bengaluru-560043, India</p>
+          <p class="email-id">mudmasteradventures@gmail.com</p>
+          <p class="phone-number">+91 8123473752</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="gallery-overlay" onclick="closeGallery(event)">
+      <div class="gallery-popup" onclick="event.stopPropagation();">
+        <div class="gallery-grid-popup">
+          <!-- Images will be dynamically added here -->
+        </div>
+        <button class="close-button" onclick="closeGallery(event)">
+          &times;
+        </button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const location = params.get("location");
+        if (location) {
+          showGallery(location);
+        }
+      });
+
+      function showGallery(location) {
+        const overlay = document.querySelector(".gallery-overlay");
+        const galleryGridPopup = overlay.querySelector(".gallery-grid-popup");
+        const images = {
+          yercaud: [
+            "./Images/yercaud1.JPG",
+            "./Images/yercaud2.jpg",
+            "./Images/yercaud3.jpg",
+            "./Images/yercaud4.JPG",
+            "./Images/yercaud5.jpg",
+            "./Images/yercaud6.jpg",
+            "./Images/yercaud7.jpg",
+            "./Images/yercaud8.JPG",
+            "./Images/yercaud9.jpg",
+            "./Images/yercaud10.jpg",
+            "./Images/yercaud11.JPG",
+            "./Images/yercaud12.jpg",
+            "./Images/yercaud13.jpg",
+          ],
+          coorg: [
+            "./Images/ooty1.jpg",
+            "./Images/ooty2.jpg",
+            "./Images/ooty3.jpg",
+            "./Images/ooty4.jpg",
+            "./Images/ooty5.jpg",
+            "./Images/ooty6.jpg",
+            "./Images/ooty7.JPG",
+            "./Images/ooty8.jpg",
+            "./Images/ooty9.jpg",
+            "./Images/ooty11.jpg",
+            "./Images/ooty12.jpg",
+            "./Images/ooty13.jpg",
+            "./Images/ooty14.JPG",
+            "./Images/ooty15.jpg",
+            "./Images/ooty16.jpg",
+            "./Images/ooty17.JPG",
+            "./Images/ooty18.JPG",
+            "./Images/ooty19.jpg",
+            "./Images/ooty20.JPG",
+          ],
+        };
+
+        galleryGridPopup.innerHTML = "";
+        images[location].forEach((image) => {
+          const img = document.createElement("img");
+          img.src = image;
+          galleryGridPopup.appendChild(img);
+        });
+
+        overlay.style.display = "flex";
+      }
+
+      function closeGallery(event) {
+        event.stopPropagation(); // Prevent closing when clicking the close button
+        const overlay = document.querySelector(".gallery-overlay");
+        overlay.style.display = "none";
+      }
+    </script>
+    <script>function toggleSidebar(menuIcon, closeBtn, sidebar) {
+      // Show the sidebar and hide the menu icon
+      menuIcon.addEventListener('click', function() {
+          sidebar.classList.add('active'); // Show the sidebar
+          menuIcon.style.display = 'none'; // Hide the menu icon
+      });
+    
+      // Hide the sidebar and show the menu icon
+      closeBtn.addEventListener('click', function() {
+          sidebar.classList.remove('active'); // Hide the sidebar
+          menuIcon.style.display = 'block'; // Show the menu icon
+      });
+    }
+    
+    // Call the function after the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuIcon = document.querySelector('.menu-icon');
+      const closeBtn = document.querySelector('.close-icon');
+      const sidebar = document.querySelector('.sidebar');
+    
+      toggleSidebar(menuIcon, closeBtn, sidebar);
+    });</script>
+  </body>
+</html>
