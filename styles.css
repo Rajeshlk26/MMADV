@@ -687,6 +687,10 @@ footer {
 }
 
 @media(max-width: 600px){
+
+  .main-wrapper {
+    min-height: calc(100vh - 15vh)
+  }
   #nav-part2 .main_navbar {
     display: none; 
 }
@@ -973,10 +977,9 @@ footer {
   border-radius: 20px;
 }
 
-footer {
-  padding: 10px;
+.home-footer{
+  height: 15vh;
 }
-
 
 .footer-container {
   columns: 3;
