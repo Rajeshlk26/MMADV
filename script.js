@@ -99,7 +99,7 @@ function init() {
       scrollTrigger: {
         trigger: ".page1 h1",
         scroller: ".main",
-        start: "top -20%",
+        start: "top -10%",
         end: "top -100%",
         scrub: 1,
       },
