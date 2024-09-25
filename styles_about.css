@@ -1,8 +1,13 @@
+.main_about_us {
+  min-height: 100vh; /
+  display: flex;
+  flex-direction: column;
+}
 .about-section {
   width: 100%;
-  margin-top: 5vh;
+  margin-top: 10px;
   margin-bottom: 20px;
-  padding: 20px; /* Add padding for better spacing */
+  padding: 20px; 
 }
 
 .about_title {
@@ -12,11 +17,11 @@
 }
 
 .about_title h1 {
-  font-size: 3vw; /* Responsive font size */
+  font-size: 3vw; 
 }
 
 .about_title p {
-  font-size: 1.2vw; /* Decreased for smaller size */
+  font-size: 1.2vw; 
 }
 
 .about-content {
@@ -46,13 +51,13 @@
 }
 
 .team-section h2 {
-  font-size: 2.5vw; /* Responsive font size */
+  font-size: 2.5vw; 
   margin-bottom: 10px;
   text-align: center;
 }
 
 .team-section p {
-  font-size: 1.5vw; /* Increased for responsiveness */
+  font-size: 1.5vw; 
   margin-bottom: 30px;
   text-align: center;
 }
@@ -69,7 +74,7 @@
   background-color: #1d1b1b;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Padding inside team member card */
+  padding: 20px;
 }
 
 .team-image {
@@ -78,10 +83,10 @@
 }
 
 .team-image img {
-  width: 100%; /* Set width to 100% */
+  width: 100%; 
   height: auto;
   border-radius: 25%;
-  max-width: 200px; /* Set a max width for larger images */
+  max-width: 200px; 
 }
 
 .team-info {
@@ -90,13 +95,13 @@
 }
 
 .team-info h3 {
-  font-size: 2vw; /* Responsive font size */
+  font-size: 2vw; 
   margin-bottom: 10px;
   text-align: center;
 }
 
 .team-info p {
-  font-size: 1vw; /* Responsive font size */
+  font-size: 1vw;
   color: #666;
   margin-bottom: 15px;
   text-align: center;
@@ -106,52 +111,52 @@
 /* Media query for smaller screens */
 @media (max-width: 600px) {
   .about-content {
-    flex-direction: column; /* Change to column layout */
-    align-items: center; /* Center items */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .about-image {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 1vh; /* Add space below image */
+    margin-right: 0; 
+    margin-bottom: 1vh; 
   }
 
   .about_title h1 {
-    font-size: 5vw; /* Adjusted for smaller screens */
+    font-size: 5vw; 
   }
 
   .about-text {
     font-size: 2.5vw;
     text-align: center;
     margin-left: 5vw;
-    margin-right: 4vw; /* Adjusted for smaller screens */
+    margin-right: 4vw; 
   }
 
   .team-section h2 {
-    font-size: 4vw; /* Adjusted for smaller screens */
+    font-size: 4vw; 
   }
 
   .team-section p {
-    font-size: 3.5vw; /* Adjusted for smaller screens */
+    font-size: 3.5vw; 
   }
 
   .team-member {
-    flex-direction: column; /* Change to column layout */
-    align-items: center; /* Center items */
+    flex-direction: column;
+    align-items: center; 
   }
 
   .team-image {
-    margin-bottom: 20px; /* Add space below image */
+    margin-bottom: 20px; 
   }
 
   .team-info {
-    text-align: center; /* Center text for better proportion */
+    text-align: center; 
   }
 
   .team-info h3 {
-    font-size: 3vw; /* Adjusted for smaller screens */
+    font-size: 3vw; 
   }
 
   .team-info p {
-    font-size: 2.5vw; /* Adjusted for smaller screens */
+    font-size: 2.5vw; 
   }
 }
