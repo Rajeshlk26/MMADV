@@ -1,49 +1,22 @@
-// function init() {
-//   gsap.registerPlugin(ScrollTrigger);
+function init() {
+  gsap.registerPlugin(ScrollTrigger);
 
-//   // Initialize Locomotive Scroll
-//   const locoScroll = new LocomotiveScroll({
-//     el: document.querySelector(".main"),
-//     smooth: true,
-//     smartphone: {
-//       smooth: true,
-//       direction: 'vertical', // Ensure vertical scrolling
-//       gestureDirection: 'vertical',
-//       breakpoint: 0, // To trigger for all mobile sizes
-//     },
-//     tablet: { smooth: true },
-//   });
-
-//   locoScroll.on("scroll", ScrollTrigger.update);
-
-//   // Set up ScrollTrigger proxy
-//   ScrollTrigger.scrollerProxy(".main", {
-//     scrollTop(value) {
-//       return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-//     },
-//     getBoundingClientRect() {
-//       return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-//     },
-//     pinType: document.querySelector(".main").style.transform ? "transform" : "fixed",
-//   });
-
-//   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-//   ScrollTrigger.refresh();
-
-
-let mm2 = gsap.matchMedia();
-
-mm2.add("(min-width: 601px)", () => {
-  // Desktop with Locomotive Scroll
+  // Initialize Locomotive Scroll
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector(".main"),
     smooth: true,
-    smartphone: { smooth: true },
+    smartphone: {
+      smooth: true,
+      direction: 'vertical', // Ensure vertical scrolling
+      gestureDirection: 'vertical',
+      breakpoint: 0, // To trigger for all mobile sizes
+    },
     tablet: { smooth: true },
   });
 
   locoScroll.on("scroll", ScrollTrigger.update);
 
+  // Set up ScrollTrigger proxy
   ScrollTrigger.scrollerProxy(".main", {
     scrollTop(value) {
       return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
@@ -56,12 +29,6 @@ mm2.add("(min-width: 601px)", () => {
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
-});
-
-mm2.add("(max-width: 600px)", () => {
-  // Mobile without Locomotive Scroll
-  ScrollTrigger.refresh();
-});
 
   // Navbar toggle functionality
   function toggleSidebar(menuIcon, closeBtn, sidebar) {
@@ -121,7 +88,7 @@ mm2.add("(max-width: 600px)", () => {
         scroller: ".main",
         start: "top 70%",
         end: "top -50%",
-        scrub: 1,
+        scrub: true,
       },
     });
     
@@ -132,9 +99,9 @@ mm2.add("(max-width: 600px)", () => {
       scrollTrigger: {
         trigger: ".page1 h1",
         scroller: ".main",
-        start: "top -10%",
+        start: "top -0%",
         end: "top -100%",
-        scrub: 1,
+        scrub: true,
       },
     });
     
@@ -143,8 +110,7 @@ mm2.add("(max-width: 600px)", () => {
 }
 
 // Initialize the script
-// init();
-
+init();
 
 // Additional page functionality (Expedition Cards and Carousel)
 let items = document.querySelectorAll('.expedition-card-section .expedition-card');
