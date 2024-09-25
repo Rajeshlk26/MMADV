@@ -574,7 +574,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .partnership-grid {
   columns: 4;
-  gap: 20px; 
+  gap: 60px; 
   padding: 0 20px; 
 }
 
@@ -586,7 +586,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%; 
   object-fit: fill;
   opacity: 80%;
-  border-radius: 40px;
+  border-radius: 20px;
 }
 
 .home-footer{

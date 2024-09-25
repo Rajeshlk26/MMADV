@@ -75,6 +75,7 @@ function init() {
         start: "top -70%",
         end: "top -120",
         scrub: 3,
+        markers: true,
       },
     });
     tl2.to(".main", { backgroundColor: "#fff" });
@@ -102,6 +103,7 @@ function init() {
         start: "top -0%",
         end: "top -100%",
         scrub: true,
+        markers: true,
       },
     });
     
