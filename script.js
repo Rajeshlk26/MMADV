@@ -97,12 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
         trigger: ".page1 video",
         scroller: ".main",
         start: "top 10%",
-        end: "top -50%",
-        scrub: 1,
+        end: "top -90%",
+        scrub: 0.5,
       },
     });
 
     tl2.to(".main", { backgroundColor: "#fff" }, "anim");
+    t12.to(".nav", { backgroundColor: "#fff"}, "anim");
     
   });
 

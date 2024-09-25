@@ -198,7 +198,7 @@
 
 @media (max-width: 600px) {
   .what-we-do-section {
-    padding: 5vh 5vw; /* Adjust padding for smaller screens */
+    padding: 1vh 5vw; /* Adjust padding for smaller screens */
   }
 
   .what-we-do-title h1 {

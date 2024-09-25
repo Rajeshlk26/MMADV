@@ -687,7 +687,9 @@ footer {
 }
 
 @media(max-width: 600px){
-
+  .nav{
+    height: 6vh;
+  }
   #nav-part2 .main_navbar {
     display: none; 
 }
