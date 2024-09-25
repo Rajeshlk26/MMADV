@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scroller: ".main",
         start: "top 70%",
         end: "top -50%",
-        scrub: true,
+        scrub: 1,
       },
     });
 
@@ -96,13 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollTrigger: {
         trigger: ".page1 video",
         scroller: ".main",
-        start: "top -0%",
-        end: "top -100%",
-        scrub: true,
+        start: "top 30%",
+        end: "top -70%",
+        scrub: 1,
       },
     });
 
-    tl2.to(".main", { backgroundColor: "#fff" });
+    tl2.to(".main", { backgroundColor: "#fff" }, "anim");
     
   });
 
