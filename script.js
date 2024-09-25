@@ -112,23 +112,26 @@ ScrollTrigger.refresh();
 
 
 // Additional page functionality (Expedition Cards and Carousel)
+// Additional page functionality (Expedition Cards and Carousel)
 let items = document.querySelectorAll(
   ".expedition-card-section .expedition-card"
 );
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
 
-let active = 3;
+// Set initial active card to the first card
+let active = 0;
 
 function loadShow() {
   let stt = 0;
 
+  // Show the active card
   items[active].style.transform = `none`;
   items[active].style.zIndex = 1;
-
   items[active].style.filter = "none";
   items[active].style.opacity = 1;
 
+  // Animate cards to the right of the active card
   for (var i = active + 1; i < items.length; i++) {
     stt++;
     items[i].style.transform = `translateX(${120 * stt}px) scale(${
@@ -141,31 +144,35 @@ function loadShow() {
 
   stt = 0;
 
+  // Animate cards to the left of the active card
   for (var i = active - 1; i >= 0; i--) {
     stt++;
-
     items[i].style.transform = `translateX(${-120 * stt}px) scale(${
       1 - 0.2 * stt
     }) perspective(16px) rotateY(1deg)`;
-
     items[i].style.zIndex = -stt;
-
     items[i].style.filter = "blur(5px)";
-
     items[i].style.opacity = stt > 2 ? 0 : 0.6;
   }
 }
 
+// Initial load to show the first card
 loadShow();
 
 next.onclick = function () {
-  active = active + 1 < items.length ? active + 1 : active;
-  loadShow();
+  // Move to the next card if not at the end
+  if (active + 1 < items.length) {
+    active++;
+    loadShow();
+  }
 };
 
 prev.onclick = function () {
-  active = active - 1 >= 0 ? active - 1 : active;
-  loadShow();
+  // Move to the previous card if not at the beginning
+  if (active - 1 >= 0) {
+    active--;
+    loadShow();
+  }
 };
 
 //page 4
