@@ -856,17 +856,12 @@ footer {
   flex: 0 0 60vw; 
   height: 35vh; 
   margin: 0 1rem;
-  position: relative;
-  transition: transform 0.5s ease;
 }
 
 .video-container {
-  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  cursor: pointer;
 }
 
 .video-container:hover {
@@ -881,48 +876,17 @@ footer {
 }
 
 .play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  z-index: 10;
+  width: 50px;
+  height: 50px;
 }
 
 .play-btn i {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .popup {
-  display: none; /* Hidden by default */
-  position: absolute; /* Fixed positioning for the popup */
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure it is above other content */
-}
-
-.popup-content {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  max-width: 90%;
-  max-height: 90%;
-  position: relative;
-  overflow: hidden;
 }
 
 .popup video {
