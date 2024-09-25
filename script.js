@@ -112,6 +112,9 @@ function init() {
     });
 
     tl2.to(".main", { backgroundColor: "#fff" });
+    window.addEventListener("orientationchange", () => {
+      ScrollTrigger.refresh();
+    });
   });
 }
 
