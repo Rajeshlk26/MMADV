@@ -96,8 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollTrigger: {
         trigger: ".page1 video",
         scroller: ".main",
-        start: "top 30%",
-        end: "top -70%",
+        start: "top 10%",
+        end: "top -50%",
         scrub: 1,
       },
     });
