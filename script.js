@@ -1,16 +1,31 @@
-function init() {
+ // Navbar toggle functionality
+ function toggleSidebar(menuIcon, closeBtn, sidebar) {
+  menuIcon.addEventListener("click", function () {
+    sidebar.classList.add("active"); // Show the sidebar
+    menuIcon.style.display = "none"; // Hide the menu icon
+  });
+
+  closeBtn.addEventListener("click", function () {
+    sidebar.classList.remove("active"); // Hide the sidebar
+    menuIcon.style.display = "block"; // Show the menu icon
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.querySelector(".menu-icon");
+  const closeBtn = document.querySelector(".close-icon");
+  const sidebar = document.querySelector(".sidebar");
+
+  toggleSidebar(menuIcon, closeBtn, sidebar);
+});
+
+//Scroll trigger
   gsap.registerPlugin(ScrollTrigger);
 
   // Initialize Locomotive Scroll
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector(".main"),
     smooth: true,
-    smartphone: {
-      smooth: true,
-      direction: "vertical", // Ensure vertical scrolling
-      gestureDirection: "vertical",
-    },
-    tablet: { smooth: true },
   });
 
   locoScroll.on("scroll", ScrollTrigger.update);
@@ -33,30 +48,6 @@ function init() {
     pinType: document.querySelector(".main").style.transform
       ? "transform"
       : "fixed",
-  });
-
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-  ScrollTrigger.refresh();
-
-  // Navbar toggle functionality
-  function toggleSidebar(menuIcon, closeBtn, sidebar) {
-    menuIcon.addEventListener("click", function () {
-      sidebar.classList.add("active"); // Show the sidebar
-      menuIcon.style.display = "none"; // Hide the menu icon
-    });
-
-    closeBtn.addEventListener("click", function () {
-      sidebar.classList.remove("active"); // Hide the sidebar
-      menuIcon.style.display = "block"; // Show the menu icon
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const closeBtn = document.querySelector(".close-icon");
-    const sidebar = document.querySelector(".sidebar");
-
-    toggleSidebar(menuIcon, closeBtn, sidebar);
   });
 
   // Media query for responsive animations
@@ -112,14 +103,12 @@ function init() {
     });
 
     tl2.to(".main", { backgroundColor: "#fff" });
-    window.addEventListener("orientationchange", () => {
-      ScrollTrigger.refresh();
-    });
+    
   });
-}
 
-// Initialize the script
-init();
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ScrollTrigger.refresh();
+
 
 // Additional page functionality (Expedition Cards and Carousel)
 let items = document.querySelectorAll(
