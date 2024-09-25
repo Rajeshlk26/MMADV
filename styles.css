@@ -807,7 +807,7 @@ footer {
 }
 .expedition-image {
   width: 100%;
-  height: 25vh;
+  height: auto;
 }
 
 .expedition-image img {
