@@ -93,7 +93,7 @@
           <h3>Address</h3>
           <p>Mud Master Adventures, Kalyan Nagar</p>
           <p>Bengaluru-560043, India</p>
-          <p class="email-id">mudmasteradventures@gmail.com</p>
+          <p class="email-id">aj@mudmasteradventures.com</p>
           <p class="phone-number">+91 8123473752</p>
         </div>
       </div>
@@ -233,19 +233,13 @@ window.addEventListener('load', function() {
 
   // Gallery Card Animation
   gsap.utils.toArray(".gallery-card").forEach((card, index) => {
-    gsap.from(card, {
-      duration: 1,
-      scale: 0.8,
-      opacity: 0,
-      x: index % 2 === 0 ? -50 : 50, // Stagger cards left and right
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: card,
-        start: "top 90%",
-        end: "bottom 10%",
-        scrub: true,
-      },
-    });
+     gsap.from(card, {
+    duration: 1.2,
+    x: 0,
+    opacity: 0,
+    ease: "power2.out",
+    delay: 0.5,
+  });
   });
 
 });
