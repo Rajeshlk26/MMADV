@@ -237,18 +237,16 @@ gsap.from(".team-section h2", {
 });
 
 gsap.from(".team-member", {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    scale: 0.9,
-    stagger: 0.2,
-    ease: "power2.out",
-    scrollTrigger: {
-        trigger: ".team-section",
-        start: "top 90%",
-        end: "bottom 10%",
-        scrub: true,
-    },
+  duration: 1,
+         y: -50,
+         opacity: 0,
+         ease: "power2.out",
+         scrollTrigger: {
+           trigger: card,
+           start: "top 80%", // Start animation when the top of the card hits 80% of the viewport height
+           toggleActions: "play none none reverse", // Play on enter, reverse on leave
+         },
+         delay: index * 0.1, // Stagger effect based on index
 });
 
 // Navigation Bar Animation

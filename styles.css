@@ -105,7 +105,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .nav-link:hover {
-  color: #f9a81d; /* Hover color */
+  color: #f9a81d;
 }
 
 .main_navbar .nav-link::after {
@@ -452,9 +452,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .carousel-item {
-  flex: 0 0 400px; /* Fixed width for each card */
-  height: 400px; /* Fixed height for each card */
-  margin: 0 1rem; /* Margin for spacing */
+  flex: 0 0 400px;
+  height: 400px; 
+  margin: 0 1rem; 
   position: relative;
   transition: transform 0.5s ease;
 }
